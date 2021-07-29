@@ -106,7 +106,7 @@ void gameover(char broad[ROWS][COLS], int row, int col)
 		{
 			if (broad[i][j] == '1')
 			{
-				printf("");
+				printf("* ");
 			}
 			else
 			{
@@ -125,13 +125,13 @@ void playgame(char broad[ROWS][COLS],char show[ROWS][COLS])
 	int win = 0;
 	while (win<ROW*COL-count)
 	{
-		printf("ÇëÊäÈë×ø±ê(ÐÐÊý,ÁÐÊý):>");
+		printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½):>");
 		scanf("%d %d", &x, &y);
 		if (x >= 1 && x <= ROW && y >= 1 && y <= COL)
 		{
 			if (broad[x][y] == '1')
 			{
-				printf("Ë³¸É±¬Õ¨£¬game over\n");
+				printf("Ë³ï¿½É±ï¿½Õ¨ï¿½ï¿½game over\n");
 				gameover(broad, ROW, COL);
 				return;
 			}
@@ -153,12 +153,12 @@ void playgame(char broad[ROWS][COLS],char show[ROWS][COLS])
 		}
 		else
 		{
-			printf("ÊäÈë·Ç·¨ÇëÖØÊÔ\n");
+			printf("ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
 		}
 	}
 	if (win - ROW * COL - count == 0)
 	{
-		printf("¹§Ï²ÅÅÀ×³É¹¦\n");
+		printf("ï¿½ï¿½Ï²ï¿½ï¿½ï¿½×³É¹ï¿½\n");
 		return;
 	}
 }
